@@ -28,8 +28,8 @@ colorama = "*"
 
 
 [tool.poetry]
-packages = [{ include = "scripts" },
-    { include = "eodms_cli.py" }
+packages = [{ include = "scripts" , to = "eodms_cli" },
+    { include = "eodms_cli.py" , to = "eodms_cli" }
 ]
 
 
