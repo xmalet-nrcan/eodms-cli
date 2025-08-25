@@ -5,11 +5,16 @@ description = "The EODMS-CLI script is used to search, order and download imager
 authors = [
     { name = "Kevin Ballantyne", email = "kevin.ballantyne@canada.ca" }
 ]
-license = { text = "MIT LicenseCopyright (c) His Majesty the King in Right of Canada, as represented by the Minister of Natural Resources, 2025.Permission is hereby granted, free of charge, to any person obtaining a copyof this software and associated documentation files (the \"Software\"), to dealin the Software without restriction, including without limitation the rightsto use, copy, modify, merge, publish, distribute, sublicense, and/or sellcopies of the Software, and to permit persons to whom the Software isfurnished to do so, subject to the following conditions:The above copyright notice and this permission notice shall be included in allcopies or substantial portions of the Software.THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS ORIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THEAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHERLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THESOFTWARE." }
+license = { file = "LICENSE" }
+
 readme = "README.md"
-requires-python = ">=3.6"
+
+requires-python = ">=3.9"
+
+cache-dir = "./.venv"
+
 [tool.poetry.dependencies]
-py-eodms-rapi  = ">=1.7.0"
+py-eodms-rapi = ">=1.7.0"
 requests = ">=2.23.0"
 dateparser = ">=1.0.0"
 geomet = ">=0.3.0"
@@ -21,11 +26,10 @@ numpy = "*"
 packaging = "*"
 colorama = "*"
 
-cache-dir="./venv"
 
 [tool.poetry]
-packages = [{ include = "scripts" } ,
- { include = "eodms_cli.py" }
+packages = [{ include = "scripts" },
+    { include = "eodms_cli.py" }
 ]
 
 
