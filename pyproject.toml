@@ -1,5 +1,5 @@
 [project]
-name = "eodms-cli"
+name = "eodms_cli"
 version = "3.6.3"
 description = "The EODMS-CLI script is used to search, order and download imagery from the EODMS using the REST API (RAPI) service."
 authors = [
@@ -21,8 +21,13 @@ numpy = "*"
 packaging = "*"
 colorama = "*"
 
+cache-dir="./venv"
 
 [tool.poetry]
+packages = [{ include = "scripts" } ,
+ { include = "eodms_cli.py" }
+]
+
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.4.1"
